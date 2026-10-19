@@ -1,20 +1,24 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>K-TIRADS 2021 암기 노트 — 5. 생검 결정 — 위험인자와 작은 K-TIRADS 5</title><style>/* study-craft — 학습자료 토큰 (A4 인쇄 + 화면)
+<meta name="color-scheme" content="dark light">
+<title>K-TIRADS 2021 암기 노트 — 5. 생검 결정 — 위험인자와 작은 K-TIRADS 5</title><style>/* study-craft — 학습자료 토큰 (다크 기본 · A4 인쇄 대응)
  *
- * design-craft 규칙을 따른다: 생성기에는 색·크기를 직접 쓰지 않는다. 전부 여기서 정의하고
- * study-build.py 는 var() 로만 참조한다. design-lint.py --tokens <이 파일> 로 스캔한다.
- *
- * 인쇄가 기본값이다: 본문 10.5pt, A4(210×297mm), 여백 16mm×14mm, 줄간 1.6.
- * 색은 흑백 인쇄에서도 구분되도록 대비를 확보했다(본문 #1C1C1E on #FFFFFF = 16.4:1).
- * 액센트는 인쇄에서 회색으로 떨어져도 위계가 유지되도록 명도차를 크게 잡았다.
+ * 규칙
+ *  - **다크가 기본**이다. 화면(Pages)에서 밤에 읽는 용도가 우선이다.
+ *  - 색은 **표면마다 새로 유도**한다(design-craft adaptive palette). 이 파일은 기본값이고,
+ *    자료 폴더의 `palette.css`(study-palette.py 가 생성)가 같은 `--color-*` 이름을 덮어쓴다.
+ *  - 생성기에는 hex 를 쓰지 않는다. 전부 여기와 palette.css 에만 있고 study-build.py 는 var() 만 참조.
+ *  - 대비는 `palette-advisor.py --report` 로 검증한다(텍스트 ≥4.5:1).
+ *  - 인쇄는 `--theme auto` 로 밝게 전환한다(잉크·가독성). 기본(dark)은 인쇄도 어둡다.
  */
 :root {
   /* 조판 */
   --study-page-w: 210mm;
   --study-page-h: 297mm;
-  --study-pad-x: 14mm;
+  --study-pad-x: 14mm;          /* 인쇄 여백(@page) */
   --study-pad-y: 16mm;
+  --study-maxw: 900px;          /* 화면 본문 최대 폭 */
+  --study-pad-x-screen: clamp(28px, 5vw, 80px);   /* 화면 좌우 여백(design-craft 규칙) */
 
   /* 타이포 */
   --study-font-body: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
@@ -28,64 +32,116 @@
   --study-line: 1.6;
   --study-line-tight: 1.45;
 
-  /* 색 — 인쇄 가능 대비 */
-  --study-ink: #1C1C1E;         /* 본문 */
-  --study-ink-soft: #3A3A3E;    /* 강조 문장 */
-  --study-ink-muted: #5E5E66;   /* 출처·메타 (5.4:1) */
-  --study-rule: #D9D9DE;        /* 구분선 */
-  --study-rule-strong: #1D4ED8; /* 문서 헤더 규칙 */
-  --study-accent: #1D4ED8;      /* 질문 번호·정답 라벨 */
-  --study-bg: #FFFFFF;
-  --study-surface: #F5F5F7;     /* 카드 배경 */
-  --study-code-bg: #F0F0F3;
-
   /* 간격·형태 */
   --study-space: 2.5mm;
   --study-space-lg: 6mm;
   --study-gap-section: 8mm;
   --study-radius: 2mm;
   --study-card-pad: 3mm;
+
+  /* 색 — 다크 기본값. palette.css 가 이 블록을 대체한다 */
+  --color-surface-0: #14161A;
+  --color-surface-1: #1C2026;
+  --color-surface-2: #262B33;
+  --color-surface-inverse: #F2F4F7;
+  --color-surface-overlay: rgba(0, 0, 0, 0.6);
+  --color-text-1: #E9ECEF;
+  --color-text-2: #B7BDC6;
+  --color-text-3: #9AA2AC;
+  --color-text-on-inverse: #14161A;
+  --color-text-on-accent: #0B0D10;
+  --color-border: rgba(233, 236, 239, 0.16);
+  --color-border-strong: rgba(233, 236, 239, 0.34);
+  --color-accent: #6FB6D6;
+  --color-accent-quiet: #1E2C34;
+  --color-accent-strong: #A5D3E8;
+  --color-focus: #8CC7FF;
+  --color-positive: #6FD3A0;
+  --color-warning: #E3C275;
+  --color-negative: #F0908C;
+}
+
+/* 인쇄 시 색만으로 정보를 구분하지 않는다 — 굵기·괘선을 함께 쓴다. */
+
+/* ── per-material palette (study-palette.py) ── */
+/* study-craft — palette for: K-TIRADS 2021 암기 노트
+ * 계열: sand-charcoal (샌드 · 차콜 (실무·워크북)) · 악센트 #E96E45 · 테마 auto
+ * design-craft palette-advisor 로 유도, 다크 표면에 대비 맞춤. 생성 2026-10-20
+ * 재생성: study-palette.py <dir> --theme auto [--family X]
+ */
+:root {
+  --color-surface-0: #14161A;
+  --color-surface-1: #1C2026;
+  --color-surface-2: #262B33;
+  --color-surface-inverse: #E9ECEF;
+  --color-surface-overlay: rgba(0, 0, 0, 0.6);
+  --color-text-1: #E9ECEF;
+  --color-text-2: #B7BDC6;
+  --color-text-3: #9AA2AC;
+  --color-text-on-inverse: #14161A;
+  --color-text-on-accent: #0B0D10;
+  --color-border: #3D4146;
+  --color-border-strong: #62656A;
+  --color-accent: #E96E45;
+  --color-accent-quiet: #412E2C;
+  --color-accent-strong: #F1A389;
+  --color-focus: #838CD2;
+  --color-positive: #45A373;
+  --color-warning: #C28500;
+  --color-negative: #DB7474;
 }
 
 @page { size: var(--study-page-w) var(--study-page-h); margin: var(--study-pad-y) var(--study-pad-x); }
 * { box-sizing: border-box; }
-body { margin:0; background:var(--study-bg); color:var(--study-ink);
+body { margin:0; background:var(--color-surface-0); color:var(--color-text-1);
   font-size: var(--study-size-body); line-height: var(--study-line);
-  padding: var(--study-pad-y) var(--study-pad-x);   /* screen; @page owns the print case */
+  max-width: var(--study-maxw); margin-inline: auto;      /* 화면: 읽기 좋은 폭 */
+  padding: var(--study-pad-y) var(--study-pad-x-screen);  /* screen; @page owns the print case */
   font-family: var(--study-font-body);
   word-break: keep-all; line-break: strict; overflow-wrap: break-word; hyphens: none; }
-@media print { body { padding: 0; } }
-h1 { font-size: var(--study-size-h1); margin:0 0 var(--study-space-lg); letter-spacing:-0.01em; }
+@media print { body { padding: 0; max-width: none; margin-inline: 0; } }
+h1 { font-size: var(--study-size-h1); margin:0 0 var(--study-space-lg); letter-spacing:-0.01em;
+  color: var(--color-text-1); }
 h2 { font-size: var(--study-size-h2); margin: var(--study-gap-section) 0 var(--study-space);
-  padding-bottom: 1.5mm; border-bottom: 1px solid var(--study-rule); }
-h3 { font-size: var(--study-size-h3); margin: 5mm 0 1.5mm; }
+  padding-bottom: 1.5mm; border-bottom: 1px solid var(--color-border); color: var(--color-text-1); }
+h3 { font-size: var(--study-size-h3); margin: 5mm 0 1.5mm; color: var(--color-accent-strong); }
 p { margin:0 0 var(--study-space); }
 ul { margin:0 0 3mm; padding-left:5mm; }
 li { margin:0 0 1mm; }
-a { color: var(--study-accent); }
-code { background: var(--study-code-bg); padding: 0.3mm 1mm; border-radius: var(--study-radius);
-  font-size: var(--study-size-code); }
-a:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 2px; }
+a { color: var(--color-accent); text-decoration-color: var(--color-border-strong); }
+a:focus-visible, :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+code { background: var(--color-surface-2); color: var(--color-text-1);
+  padding: 0.3mm 1mm; border-radius: var(--study-radius); font-size: var(--study-size-code); }
+b, strong { color: var(--color-accent-strong); }
+.src { color: var(--color-text-3); font-size: var(--study-size-note); margin-top: 1mm;
+  border-left: 1.5mm solid var(--color-accent-quiet); padding-left: 2mm; }
+.qa { border: 1px solid var(--color-border); border-left: 1.2mm solid var(--color-accent);
+  border-radius: var(--study-radius); background: var(--color-surface-1);
+  padding: var(--study-card-pad); margin: 0 0 var(--study-space);
+  break-inside: avoid; page-break-inside: avoid; }
+.qa .q { font-weight: 600; color: var(--color-text-1); }
+.qa .a { color: var(--color-text-2); margin-top: 1mm; }
+.hint { color: var(--color-text-3); font-size: var(--study-size-note); }
 .cb { display:inline-block; width:3mm; height:3mm; margin-right:1.5mm;
-  border:1px solid var(--study-ink-muted); border-radius:0.5mm; vertical-align:-0.3mm; }
-.src { color: var(--study-ink-muted); font-size: var(--study-size-note); margin-top: 1mm; }
-.qa { border: 1px solid var(--study-rule); border-radius: var(--study-radius);
-  background: var(--study-surface); padding: var(--study-card-pad) var(--study-card-pad);
-  margin: 0 0 var(--study-space); break-inside: avoid; page-break-inside: avoid; }
-.qa .q { font-weight: 600; color: var(--study-ink); }
-.qa .a { color: var(--study-ink-soft); margin-top: 1mm; }
-.hint { color: var(--study-ink-muted); font-size: var(--study-size-note); }
-header.doc { border-bottom: 2px solid var(--study-rule-strong);
+  border:1px solid var(--color-text-3); border-radius:0.5mm; vertical-align:-0.3mm; }
+header.doc { border-bottom: 2px solid var(--color-accent);
   padding-bottom: 3mm; margin-bottom: var(--study-space-lg); }
-header.doc .meta { color: var(--study-ink-muted); font-size: var(--study-size-meta); }
+header.doc .meta { color: var(--color-text-3); font-size: var(--study-size-meta); }
 nav.toc { margin: 0 0 var(--study-space-lg); }
 nav.toc ol { padding-left: 5mm; }
 nav.toc li { margin: 0 0 1mm; }
 .sheet { break-before: page; page-break-before: always; }
 .sheet li { margin-bottom: 2mm; }
 .answers .pair { break-inside: avoid; margin-bottom: var(--study-space); }
-.answers .pair b { color: var(--study-accent); }
-</style></head><body>
+.answers .pair b { color: var(--color-accent); }
+/* 인쇄에서 색만으로 구분하지 않는다 — 괘선·굵기를 함께 쓴다 */
+@media print {
+  .qa { border-left-width: 1mm; }
+  .src { border-left-width: 1mm; }
+  .cb { border-width: 0.4mm; }
+}
+</style>
+</head><body>
 <header class="doc"><h1>K-TIRADS 2021 암기 노트 — 5. 생검 결정 — 위험인자와 작은 K-TIRADS 5</h1><div class="meta">topic · 수정 2026-10-20 · 초음파 · 갑상선 · K-TIRADS · 검진</div></header>
 <h2>5. 생검 결정 — 위험인자와 작은 K-TIRADS 5</h2>
 <p><b>① K-TIRADS 4 (1.0–1.5cm):</b> 특별한 위험인자가 없으면 <b>&gt;1.5cm</b> 에서 생검한다. 1.0–1.5cm 사이는 <b>초음파 소견 · 결절 위치 · 임상 위험인자 · 환자 특성</b>으로 개별 결정한다. 임상 위험인자의 예: PET 에서 FDG 섭취, 가족성 갑상선암, 쉰 목소리 같은 걱정되는 증상.</p>
