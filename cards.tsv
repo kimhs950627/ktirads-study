@@ -1,0 +1,36 @@
+front	back	tags	source
+K-TIRADS 는 점수제인가 패턴제인가?	패턴제다. 조성·에코·세 가지 의심 소견의 조합으로 등급이 정해진다.	초음파 갑상선 K-TIRADS 검진 1._한_문장_정의와_5분_요약	Ha EJ, et al. Korean J Radiol. 2021;22(12):2094-2123.
+K-TIRADS 는 어느 학회가 만들었고 현재 기준은 몇 년판인가?	대한갑상선영상의학회(KSThR, Korean Society of Thyroid Radiology). 현재 기준은 2021년 개정판이다.	초음파 갑상선 K-TIRADS 검진 1._한_문장_정의와_5분_요약	Ha EJ, et al. Korean J Radiol. 2021;22(12):2094-2123.
+고형 저에코 결절인데 세 의심 소견이 하나도 없으면 몇 등급인가?	K-TIRADS 4 (중등도 의심).	초음파 갑상선 K-TIRADS 검진 2._결정_알고리즘_Fig._9_순서	Ha EJ, et al. 2021, Table 5 및 Fig. 9.
+고형 저에코 결절에 점상 에코성 병소가 있으면?	K-TIRADS 5 (고위험).	초음파 갑상선 K-TIRADS 검진 2._결정_알고리즘_Fig._9_순서	Ha EJ, et al. 2021, Table 5 및 Fig. 9.
+2021 K-TIRADS 에서 완전 석회화 결절은 몇 등급인가?	K-TIRADS 4.	초음파 갑상선 K-TIRADS 검진 2._결정_알고리즘_Fig._9_순서	Ha EJ, et al. 2021, Table 5 및 Fig. 9.
+해면상 결절에 점상 에코성 병소가 동반되면 등급이 올라가는가?	아니다. K-TIRADS 2 패턴이면 의심 소견이 있어도 K-TIRADS 2로 둔다(2016판에서는 4로 올렸다).	초음파 갑상선 K-TIRADS 검진 2._결정_알고리즘_Fig._9_순서	Ha EJ, et al. 2021, Table 5 및 Fig. 9.
+부분 낭성 결절이 의심 소견 없이 등/고에코면 K-TIRADS _____이다.	3	초음파 갑상선 K-TIRADS 검진 2._결정_알고리즘_Fig._9_순서	Ha EJ, et al. 2021, Table 5 및 Fig. 9.
+세 가지 의심 소견을 모두 말해보라.	점상 에코성 병소(PEF), 비평행 방향(횡단면에서 전후>좌우), 불규칙 변연(침상 또는 미세소엽상).	초음파 갑상선 K-TIRADS 검진 3._세_가지_의심_US_소견_이름과_함정	Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.
+비평행 방향은 어느 단면에서 판정하는가?	횡단면(전후 직경 > 좌우 직경).	초음파 갑상선 K-TIRADS 검진 3._세_가지_의심_US_소견_이름과_함정	Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.
+평활한 변연과 경계 불명확한 변연은 의심 소견인가?	아니다. 불규칙 변연(침상·미세소엽상)만 의심 소견이다.	초음파 갑상선 K-TIRADS 검진 3._세_가지_의심_US_소견_이름과_함정	Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.
+혜성꼬리 허상을 동반한 에코성 병소는 언제 양성 소견으로 보면 안 되는가?	고형 성분 안에 있거나 낭성 성분의 경계에 있을 때.	초음파 갑상선 K-TIRADS 검진 3._세_가지_의심_US_소견_이름과_함정	Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.
+점상 에코성 병소는 고형 성분 안의 _____mm 이하 에코성 병소를 말한다.	1	초음파 갑상선 K-TIRADS 검진 3._세_가지_의심_US_소견_이름과_함정	Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.
+K-TIRADS 5·4·3 의 생검 크기 기준을 각각 말해보라.	K5 >1.0cm, K4 >1.0–1.5cm, K3 >2.0cm.	초음파 갑상선 K-TIRADS 검진 4._등급별_악성률과_생검_기준_한_표	Ha EJ, et al. 2021, Table 5.
+K-TIRADS 4 결절의 생검 기준이 범위로 제시되는 이유는?	1.0–1.5cm 사이에서는 초음파 소견·결절 위치·임상 위험인자·환자 특성을 보고 개별 결정하라는 뜻이다.	초음파 갑상선 K-TIRADS 검진 4._등급별_악성률과_생검_기준_한_표	Ha EJ, et al. 2021, Table 5.
+K-TIRADS 2 결절은 생검을 절대 하지 않는가?	아니다. 원칙적으로 안 하지만 지속적으로 유의하게 자라거나 소작·수술 전이면 시행할 수 있다.	초음파 갑상선 K-TIRADS 검진 4._등급별_악성률과_생검_기준_한_표	Ha EJ, et al. 2021, Table 5.
+K-TIRADS 3 의 악성률은 _____% 이고 생검 기준은 _____cm 이다.	3–10 / >2.0	초음파 갑상선 K-TIRADS 검진 4._등급별_악성률과_생검_기준_한_표	Ha EJ, et al. 2021, Table 5.
+K-TIRADS 4 결절에서 위험인자가 없을 때 생검 기준 크기는?	1.5cm 초과.	초음파 갑상선 K-TIRADS 검진 5._생검_결정_위험인자와_작은_K-TIRADS_5	Ha EJ, et al. 2021, Table 5 각주 및 Selection of Patients for US-Guided Biopsy 절.
+크기와 무관하게 생검해야 하는 네 가지 예후 불량 인자는?	경부 림프절 전이 의심, 주변 구조로의 명백한 갑상선외 침범, 원격 전이 확인, 수질갑상선암 의심.	초음파 갑상선 K-TIRADS 검진 5._생검_결정_위험인자와_작은_K-TIRADS_5	Ha EJ, et al. 2021, Table 5 각주 및 Selection of Patients for US-Guided Biopsy 절.
+0.8cm K-TIRADS 5 결절이 기관에 붙어 있다. 어떻게 하나?	고위험 소견이므로 생검을 권고한다.	초음파 갑상선 K-TIRADS 검진 5._생검_결정_위험인자와_작은_K-TIRADS_5	Ha EJ, et al. 2021, Table 5 각주 및 Selection of Patients for US-Guided Biopsy 절.
+고위험 소견이 없는 0.5–1cm K-TIRADS 5 는 성인에서 생검을 _____.	고려할 수 있다	초음파 갑상선 K-TIRADS 검진 5._생검_결정_위험인자와_작은_K-TIRADS_5	Ha EJ, et al. 2021, Table 5 각주 및 Selection of Patients for US-Guided Biopsy 절.
+생검 기준 미달인 K-TIRADS 5 결절의 추적 계획은?	6개월마다 1–2년 추적하고, 성장이 없으면 이후 1년마다.	초음파 갑상선 K-TIRADS 검진 6._추적검사_간격	Ha EJ, et al. 2021, Follow-Up for Nodules that Do Not Meet the Biopsy Criteria 절.
+K-TIRADS 3·4 의 추적 시점 세 개는?	1년 · 3년 · 5년.	초음파 갑상선 K-TIRADS 검진 6._추적검사_간격	Ha EJ, et al. 2021, Follow-Up for Nodules that Do Not Meet the Biopsy Criteria 절.
+생검으로 양성 확인된 결절의 추적 간격은?	2년 이상으로 늘릴 수 있다.	초음파 갑상선 K-TIRADS 검진 6._추적검사_간격	Ha EJ, et al. 2021, Follow-Up for Nodules that Do Not Meet the Biopsy Criteria 절.
+K-TIRADS 2 의 첫 추적은 _____년 뒤에 한다.	2–5	초음파 갑상선 K-TIRADS 검진 6._추적검사_간격	Ha EJ, et al. 2021, Follow-Up for Nodules that Do Not Meet the Biopsy Criteria 절.
+2021 개정에서 가장 크게 바뀐 것은 무엇인가?	생검 크기 기준(특히 K-TIRADS 4의 1.0–1.5cm 범위)이다. 구조 자체는 2016과 크게 다르지 않다.	초음파 갑상선 K-TIRADS 검진 7._왜_2021_로_개정됐나_성능_수치로_이해	Ha EJ, et al. 2021, Diagnostic Performance of the 2021 K-TIRADS Biopsy Criteria 절(다기관 후향 연구 5,708결절).
+2021 기준(1.5cm)에서 불필요 생검률은 얼마나 줄었나?	2cm 이하 결절에서 19.2–32.8% 줄었고, 2cm 초과 악성 검출 민감도 98.0%를 유지했다.	초음파 갑상선 K-TIRADS 검진 7._왜_2021_로_개정됐나_성능_수치로_이해	Ha EJ, et al. 2021, Diagnostic Performance of the 2021 K-TIRADS Biopsy Criteria 절(다기관 후향 연구 5,708결절).
+2016 K-TIRADS 기준의 불필요 생검률은?	60.9%(같은 연구, 민감도 94.9% · 특이도 24.4%).	초음파 갑상선 K-TIRADS 검진 7._왜_2021_로_개정됐나_성능_수치로_이해	Ha EJ, et al. 2021, Diagnostic Performance of the 2021 K-TIRADS Biopsy Criteria 절(다기관 후향 연구 5,708결절).
+2021 기준 2cm 초과 악성 종양 검출 민감도는 _____% 였다.	98.0	초음파 갑상선 K-TIRADS 검진 7._왜_2021_로_개정됐나_성능_수치로_이해	Ha EJ, et al. 2021, Diagnostic Performance of the 2021 K-TIRADS Biopsy Criteria 절(다기관 후향 연구 5,708결절).
+"K-TIRADS 5는 무조건 1cm 이상이면 생검, 1cm 미만은 그냥 본다" — 맞나?	아니다. 0.5cm 초과~1cm 이하 K-TIRADS 5는 고위험 소견(기관·반회후두신경 경로 부착)이 있으면 생검을 권고한다.	초음파 갑상선 K-TIRADS 검진 8._흔한_오해	
+"의심 소견이 3개면 더 높은 등급인가?"	아니다. K-TIRADS 는 개수로 등급을 올리지 않는다. 고형·저에코에서 1개 이상이면 이미 K-TIRADS 5다.	초음파 갑상선 K-TIRADS 검진 8._흔한_오해	
+"저에코가 아주 심하면(marked) 등급이 하나 더 올라가나?"	2021 기준으로는 올라가지 않는다. 현저한 저에코 결절이라도 의심 소견이 없으면 K-TIRADS 4다 (원문 Fig. 2B 예시).	초음파 갑상선 K-TIRADS 검진 8._흔한_오해	
+"ACR TI-RADS TR5는 1cm, TR4는 1.5cm니까 K-TIRADS 4도 1.5cm" — 맞나?	숫자는 비슷해 보이지만 K-TIRADS 4는 1.0–1.5cm 범위이며 위험인자·위치·환자 특성으로 개별 결정한다는 점이 다르다. 두 체계의 등급 정의도 서로 다르므로 숫자만 옮겨 외우면 안 된다.	초음파 갑상선 K-TIRADS 검진 8._흔한_오해	
+예시 A·B·C 의 등급을 각각 말해보라.	A=K-TIRADS 5 (PEF 동반), B=K-TIRADS 4 (의심 소견 없음), C=K-TIRADS 2 (해면상 패턴 유지).	초음파 갑상선 K-TIRADS 검진 9._예시_증례_연습용_실제_환자_아님	Ha EJ, et al. 2021, Table 5 (등급 정의·생검 기준) — 예시는 학습용으로 지어낸 증례다.
+오늘 배운 것을 30초로 설명하면?	조성(고형) → 에코(저에코) → 세 의심 소견 조합으로 K-TIRADS 1–5를 정하고, 등급+크기+위험인자로 생검 여부를 정한다. 2021 개정의 핵심은 K-TIRADS 4의 1.0–1.5cm 범위다.	초음파 갑상선 K-TIRADS 검진 10._스스로_확인_요약_점검	
+내일 외래에서 이 지식을 한 번 쓰려면 무엇을 확인해야 하나?	검진 초음파 판독에서 (a) 고형/부분 낭성, (b) 저에코 여부, (c) 세 의심 소견 유무, (d) 결절 최대 직경 — 이 네 가지가 판독지에 있는지 본다. 없으면 그 자리에서 물어본다.	초음파 갑상선 K-TIRADS 검진 10._스스로_확인_요약_점검	

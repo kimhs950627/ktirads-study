@@ -1,0 +1,94 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-TIRADS 2021 암기 노트 — 8. 흔한 오해</title><style>/* study-craft — 학습자료 토큰 (A4 인쇄 + 화면)
+ *
+ * design-craft 규칙을 따른다: 생성기에는 색·크기를 직접 쓰지 않는다. 전부 여기서 정의하고
+ * study-build.py 는 var() 로만 참조한다. design-lint.py --tokens <이 파일> 로 스캔한다.
+ *
+ * 인쇄가 기본값이다: 본문 10.5pt, A4(210×297mm), 여백 16mm×14mm, 줄간 1.6.
+ * 색은 흑백 인쇄에서도 구분되도록 대비를 확보했다(본문 #1C1C1E on #FFFFFF = 16.4:1).
+ * 액센트는 인쇄에서 회색으로 떨어져도 위계가 유지되도록 명도차를 크게 잡았다.
+ */
+:root {
+  /* 조판 */
+  --study-page-w: 210mm;
+  --study-page-h: 297mm;
+  --study-pad-x: 14mm;
+  --study-pad-y: 16mm;
+
+  /* 타이포 */
+  --study-font-body: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --study-size-body: 10.5pt;
+  --study-size-h1: 18pt;
+  --study-size-h2: 13pt;
+  --study-size-h3: 11pt;
+  --study-size-code: 9.5pt;
+  --study-size-note: 8.5pt;
+  --study-size-meta: 9pt;
+  --study-line: 1.6;
+  --study-line-tight: 1.45;
+
+  /* 색 — 인쇄 가능 대비 */
+  --study-ink: #1C1C1E;         /* 본문 */
+  --study-ink-soft: #3A3A3E;    /* 강조 문장 */
+  --study-ink-muted: #5E5E66;   /* 출처·메타 (5.4:1) */
+  --study-rule: #D9D9DE;        /* 구분선 */
+  --study-rule-strong: #1D4ED8; /* 문서 헤더 규칙 */
+  --study-accent: #1D4ED8;      /* 질문 번호·정답 라벨 */
+  --study-bg: #FFFFFF;
+  --study-surface: #F5F5F7;     /* 카드 배경 */
+  --study-code-bg: #F0F0F3;
+
+  /* 간격·형태 */
+  --study-space: 2.5mm;
+  --study-space-lg: 6mm;
+  --study-gap-section: 8mm;
+  --study-radius: 2mm;
+  --study-card-pad: 3mm;
+}
+
+@page { size: var(--study-page-w) var(--study-page-h); margin: var(--study-pad-y) var(--study-pad-x); }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--study-bg); color:var(--study-ink);
+  font-size: var(--study-size-body); line-height: var(--study-line);
+  padding: var(--study-pad-y) var(--study-pad-x);   /* screen; @page owns the print case */
+  font-family: var(--study-font-body);
+  word-break: keep-all; line-break: strict; overflow-wrap: break-word; hyphens: none; }
+@media print { body { padding: 0; } }
+h1 { font-size: var(--study-size-h1); margin:0 0 var(--study-space-lg); letter-spacing:-0.01em; }
+h2 { font-size: var(--study-size-h2); margin: var(--study-gap-section) 0 var(--study-space);
+  padding-bottom: 1.5mm; border-bottom: 1px solid var(--study-rule); }
+h3 { font-size: var(--study-size-h3); margin: 5mm 0 1.5mm; }
+p { margin:0 0 var(--study-space); }
+ul { margin:0 0 3mm; padding-left:5mm; }
+li { margin:0 0 1mm; }
+a { color: var(--study-accent); }
+code { background: var(--study-code-bg); padding: 0.3mm 1mm; border-radius: var(--study-radius);
+  font-size: var(--study-size-code); }
+a:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 2px; }
+.cb { display:inline-block; width:3mm; height:3mm; margin-right:1.5mm;
+  border:1px solid var(--study-ink-muted); border-radius:0.5mm; vertical-align:-0.3mm; }
+.src { color: var(--study-ink-muted); font-size: var(--study-size-note); margin-top: 1mm; }
+.qa { border: 1px solid var(--study-rule); border-radius: var(--study-radius);
+  background: var(--study-surface); padding: var(--study-card-pad) var(--study-card-pad);
+  margin: 0 0 var(--study-space); break-inside: avoid; page-break-inside: avoid; }
+.qa .q { font-weight: 600; color: var(--study-ink); }
+.qa .a { color: var(--study-ink-soft); margin-top: 1mm; }
+.hint { color: var(--study-ink-muted); font-size: var(--study-size-note); }
+header.doc { border-bottom: 2px solid var(--study-rule-strong);
+  padding-bottom: 3mm; margin-bottom: var(--study-space-lg); }
+header.doc .meta { color: var(--study-ink-muted); font-size: var(--study-size-meta); }
+nav.toc { margin: 0 0 var(--study-space-lg); }
+nav.toc ol { padding-left: 5mm; }
+nav.toc li { margin: 0 0 1mm; }
+.sheet { break-before: page; page-break-before: always; }
+.sheet li { margin-bottom: 2mm; }
+.answers .pair { break-inside: avoid; margin-bottom: var(--study-space); }
+.answers .pair b { color: var(--study-accent); }
+</style></head><body>
+<header class="doc"><h1>K-TIRADS 2021 암기 노트 — 8. 흔한 오해</h1><div class="meta">topic · 수정 2026-10-20 · 초음파 · 갑상선 · K-TIRADS · 검진</div></header>
+<h2>8. 흔한 오해</h2>
+<div class="qa"><div class="q">"K-TIRADS 5는 무조건 1cm 이상이면 생검, 1cm 미만은 그냥 본다" — 맞나?</div><div class="a">아니다. 0.5cm 초과~1cm 이하 K-TIRADS 5는 고위험 소견(기관·반회후두신경 경로 부착)이 있으면 생검을 권고한다.</div></div>
+<div class="qa"><div class="q">"의심 소견이 3개면 더 높은 등급인가?"</div><div class="a">아니다. K-TIRADS 는 개수로 등급을 올리지 않는다. 고형·저에코에서 <b>1개 이상</b>이면 이미 K-TIRADS 5다.</div></div>
+<div class="qa"><div class="q">"저에코가 아주 심하면(marked) 등급이 하나 더 올라가나?"</div><div class="a">2021 기준으로는 올라가지 않는다. 현저한 저에코 결절이라도 의심 소견이 없으면 K-TIRADS 4다 (원문 Fig. 2B 예시).</div></div>
+<div class="qa"><div class="q">"ACR TI-RADS TR5는 1cm, TR4는 1.5cm니까 K-TIRADS 4도 1.5cm" — 맞나?</div><div class="a">숫자는 비슷해 보이지만 K-TIRADS 4는 <b>1.0–1.5cm 범위</b>이며 위험인자·위치·환자 특성으로 개별 결정한다는 점이 다르다. 두 체계의 등급 정의도 서로 다르므로 숫자만 옮겨 외우면 안 된다.</div></div></body></html>

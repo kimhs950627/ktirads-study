@@ -1,0 +1,106 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-TIRADS 2021 암기 노트 — 3. 세 가지 의심 US 소견 (이름과 함정)</title><style>/* study-craft — 학습자료 토큰 (A4 인쇄 + 화면)
+ *
+ * design-craft 규칙을 따른다: 생성기에는 색·크기를 직접 쓰지 않는다. 전부 여기서 정의하고
+ * study-build.py 는 var() 로만 참조한다. design-lint.py --tokens <이 파일> 로 스캔한다.
+ *
+ * 인쇄가 기본값이다: 본문 10.5pt, A4(210×297mm), 여백 16mm×14mm, 줄간 1.6.
+ * 색은 흑백 인쇄에서도 구분되도록 대비를 확보했다(본문 #1C1C1E on #FFFFFF = 16.4:1).
+ * 액센트는 인쇄에서 회색으로 떨어져도 위계가 유지되도록 명도차를 크게 잡았다.
+ */
+:root {
+  /* 조판 */
+  --study-page-w: 210mm;
+  --study-page-h: 297mm;
+  --study-pad-x: 14mm;
+  --study-pad-y: 16mm;
+
+  /* 타이포 */
+  --study-font-body: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --study-size-body: 10.5pt;
+  --study-size-h1: 18pt;
+  --study-size-h2: 13pt;
+  --study-size-h3: 11pt;
+  --study-size-code: 9.5pt;
+  --study-size-note: 8.5pt;
+  --study-size-meta: 9pt;
+  --study-line: 1.6;
+  --study-line-tight: 1.45;
+
+  /* 색 — 인쇄 가능 대비 */
+  --study-ink: #1C1C1E;         /* 본문 */
+  --study-ink-soft: #3A3A3E;    /* 강조 문장 */
+  --study-ink-muted: #5E5E66;   /* 출처·메타 (5.4:1) */
+  --study-rule: #D9D9DE;        /* 구분선 */
+  --study-rule-strong: #1D4ED8; /* 문서 헤더 규칙 */
+  --study-accent: #1D4ED8;      /* 질문 번호·정답 라벨 */
+  --study-bg: #FFFFFF;
+  --study-surface: #F5F5F7;     /* 카드 배경 */
+  --study-code-bg: #F0F0F3;
+
+  /* 간격·형태 */
+  --study-space: 2.5mm;
+  --study-space-lg: 6mm;
+  --study-gap-section: 8mm;
+  --study-radius: 2mm;
+  --study-card-pad: 3mm;
+}
+
+@page { size: var(--study-page-w) var(--study-page-h); margin: var(--study-pad-y) var(--study-pad-x); }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--study-bg); color:var(--study-ink);
+  font-size: var(--study-size-body); line-height: var(--study-line);
+  padding: var(--study-pad-y) var(--study-pad-x);   /* screen; @page owns the print case */
+  font-family: var(--study-font-body);
+  word-break: keep-all; line-break: strict; overflow-wrap: break-word; hyphens: none; }
+@media print { body { padding: 0; } }
+h1 { font-size: var(--study-size-h1); margin:0 0 var(--study-space-lg); letter-spacing:-0.01em; }
+h2 { font-size: var(--study-size-h2); margin: var(--study-gap-section) 0 var(--study-space);
+  padding-bottom: 1.5mm; border-bottom: 1px solid var(--study-rule); }
+h3 { font-size: var(--study-size-h3); margin: 5mm 0 1.5mm; }
+p { margin:0 0 var(--study-space); }
+ul { margin:0 0 3mm; padding-left:5mm; }
+li { margin:0 0 1mm; }
+a { color: var(--study-accent); }
+code { background: var(--study-code-bg); padding: 0.3mm 1mm; border-radius: var(--study-radius);
+  font-size: var(--study-size-code); }
+a:focus-visible { outline: 2px solid var(--study-accent); outline-offset: 2px; }
+.cb { display:inline-block; width:3mm; height:3mm; margin-right:1.5mm;
+  border:1px solid var(--study-ink-muted); border-radius:0.5mm; vertical-align:-0.3mm; }
+.src { color: var(--study-ink-muted); font-size: var(--study-size-note); margin-top: 1mm; }
+.qa { border: 1px solid var(--study-rule); border-radius: var(--study-radius);
+  background: var(--study-surface); padding: var(--study-card-pad) var(--study-card-pad);
+  margin: 0 0 var(--study-space); break-inside: avoid; page-break-inside: avoid; }
+.qa .q { font-weight: 600; color: var(--study-ink); }
+.qa .a { color: var(--study-ink-soft); margin-top: 1mm; }
+.hint { color: var(--study-ink-muted); font-size: var(--study-size-note); }
+header.doc { border-bottom: 2px solid var(--study-rule-strong);
+  padding-bottom: 3mm; margin-bottom: var(--study-space-lg); }
+header.doc .meta { color: var(--study-ink-muted); font-size: var(--study-size-meta); }
+nav.toc { margin: 0 0 var(--study-space-lg); }
+nav.toc ol { padding-left: 5mm; }
+nav.toc li { margin: 0 0 1mm; }
+.sheet { break-before: page; page-break-before: always; }
+.sheet li { margin-bottom: 2mm; }
+.answers .pair { break-inside: avoid; margin-bottom: var(--study-space); }
+.answers .pair b { color: var(--study-accent); }
+</style></head><body>
+<header class="doc"><h1>K-TIRADS 2021 암기 노트 — 3. 세 가지 의심 US 소견 (이름과 함정)</h1><div class="meta">topic · 수정 2026-10-20 · 초음파 · 갑상선 · K-TIRADS · 검진</div></header>
+<h2>3. 세 가지 의심 US 소견 (이름과 함정)</h2>
+<p><b>① 점상 에코성 병소(PEF, punctate echogenic foci)</b> — 고형 성분 안의 <b>1mm 이하</b> 에코성 병소. "미세석회화(microcalcifications)"와 같은 소견이지만, 콜로이드 응집 같은 다른 원인도 있어 학회는 PEF 라는 용어를 권한다.</p>
+<p><b>② 비평행 방향(nonparallel orientation = taller-than-wide)</b> — <b>횡단면</b>에서 전후 직경 &gt; 좌우 직경. 2021은 <b>횡단면</b>을 기준면으로 골랐다(관찰자 간 변이를 줄이려고).</p>
+<p><b>③ 불규칙 변연(irregular margin)</b> — <b>침상(spiculated) 또는 미세소엽상(microlobulated)</b>. 평활하거나 경계 불명확한 변연은 악성 위험을 올리지 않는다(smooth/ill-defined 는 의심 소견이 아니다).</p>
+<p><b>살 붙임 — 같은 소견도 결절이 고형·저에코일 때 훨씬 위험하다.</b></p>
+<ul>
+<li>PEF 의 악성률: 고형 저에코 <b>60.7–81.3%</b> vs 부분 낭성·등/고에코 <b>11.6–25.9%</b></li>
+<li>비평행 방향: 고형 저에코 <b>77.0–87.7%</b> vs 부분 낭성·등/고에코 <b>10.5–31.3%</b></li>
+<li>불규칙 변연: 고형 저에코 <b>80.0–86.6%</b> vs 부분 낭성·등/고에코 <b>47.8–88.9%</b> — 변연은 패턴에 덜 좌우된다.</li>
+</ul>
+<p><b>함정:</b> 낭 내 에코성 병소 + 혜성꼬리 허상은 <b>양성</b>(K-TIRADS 2)이지만, 그 병소가 <b>고형 성분 안</b>에 있거나 <b>낭성 성분의 경계</b>에 있으면 양성 소견으로 취급하면 안 된다.</p>
+<div class="qa"><div class="q">세 가지 의심 소견을 모두 말해보라.</div><div class="a">점상 에코성 병소(PEF), 비평행 방향(횡단면에서 전후&gt;좌우), 불규칙 변연(침상 또는 미세소엽상).</div></div>
+<div class="qa"><div class="q">비평행 방향은 어느 단면에서 판정하는가?</div><div class="a">횡단면(전후 직경 &gt; 좌우 직경).</div></div>
+<div class="qa"><div class="q">평활한 변연과 경계 불명확한 변연은 의심 소견인가?</div><div class="a">아니다. 불규칙 변연(침상·미세소엽상)만 의심 소견이다.</div></div>
+<div class="qa"><div class="q">혜성꼬리 허상을 동반한 에코성 병소는 언제 양성 소견으로 보면 안 되는가?</div><div class="a">고형 성분 안에 있거나 낭성 성분의 경계에 있을 때.</div></div>
+<div class="qa"><div class="q">점상 에코성 병소는 고형 성분 안의 _____mm 이하 에코성 병소를 말한다.</div><div class="a">1</div></div>
+<div class="src">출처: Ha EJ, et al. 2021, US lexicon 및 suspicious US features 절.</div></body></html>
